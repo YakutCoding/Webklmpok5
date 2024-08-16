@@ -2,17 +2,33 @@
 <html>
 <head>
     <style>
+        /* Font New Amsterdam */
         .new-amsterdam-regular {
             font-family: "New Amsterdam", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
-        p {
+        p, img, .divs {
             font-family: "New Amsterdam";
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
-        div {
-            font-family: "New Amsterdam";
-            background: #333; /* Background div warna abu-abu gelap */
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(90deg, yellow, pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .divs {
+            background: #333;
             color: white;
             width: 300px;
             height: 400px;
@@ -26,33 +42,41 @@
 </head>
 <body style="background-color:#1c1c1c; color: white;">
     <h1 style="width:100%;border-radius:20px;background: #555; background-color:#303030; color:white;font-family:New Amsterdam">
-        <br>&nbsp;&nbsp;<b>Kelompok 5<b>&nbsp;&nbsp;<gob style="background-color:white">|</gob>&nbsp;&nbsp;OUR WEBSITE&nbsp;&nbsp;&nbsp;<gob style="width:40px;height:40px;border-radius:20px"></gob><br><br>
+        <br>&nbsp;&nbsp;<b>Kelompok 5<b>&nbsp;&nbsp;<gob style="background-color:white">|</gob>&nbsp;&nbsp;OUR WEBSITE&nbsp;&nbsp;&nbsp;&nbsp;<nasv style="width:40px;height:40px;border-radius:20px;background:linear-gradient(180deg, rgba(255,248,0,1) 0%, rgba(243,0,255,1) 100%);linear-gradient(180deg, rgba(255,248,0,1) 0%, rgba(243,0,255,1) 100%); color: rgba(0, 0, 0, 0);">abc</nasv><br><br>
     </h1>
     <center>
-        <p style="font-size:60px;color:#ccc"><br><br>We going to conservate Gajah sumatra</p>
+        <p class="gradient-text" style="font-size:60px;color:#ccc"><br><br>We are conservating Gajah sumatra</p>
         <p style="font-size:26px;color:#999">Web kelompok 5,kasih 100 pelis</p>
         <br><br>
         <img style="border-radius:10px;border: 1px solid;width:700px" src="https://i.ibb.co.com/G7WQPzF/IMG-20240816-111317.jpg" alt="Image"><br><br>
         <br><br><br><hr><br>
         
         <p style="font-size:100px;color:#e803fc;text-shadow: h-shadow v-shadow blur-radius color;">OUR MISSION </p>
-        <p style="font-size:27px;color:#ccc">We are ngerjain tugas P5, our mission to get the best grade, We documentate our gajah sumatra photos, gallery, and information about our selected animal</p><br><br><hr><br>
+        <p style="font-size:27px;color:white">We are ngerjain tugas P5, our mission to get the best grade, We documentate our gajah sumatra photos, gallery, and information about our selected animal</p><br><br><hr><br>
         <br><p style="font-size:30px;color:#e803fc">OUR DOCUMENTATION</p>
-        <div><br>
+        <div class="divs"><br>
             <img width="100px" src="https://iili.io/dEbZhIp.md.png" style="width:250px;border-radius:10px" alt="Documentation Image">
             <br>
             <p style="font-size:35px">FOTO GAJAH</p>
             <br>
-     
-            <svg> 
-                <defs> 
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%"> 
-                        <stop offset="0%" style="stop-color:red;" /> 
-                    </linearGradient> 
-                </defs> 
-            </svg>
-            </p><br>
         </div>
     </center>
+    <script>
+        // Function to add fade-in effect
+        function fadeInElements() {
+            const elements = document.querySelectorAll('p, img, .divs');
+            elements.forEach((element) => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    element.classList.add('fade-in');
+                }
+            });
+        }
+
+        // Trigger fade-in on scroll
+        window.addEventListener('scroll', fadeInElements);
+        // Trigger fade-in on load
+        window.addEventListener('load', fadeInElements);
+    </script>
 </body>
 </html>
