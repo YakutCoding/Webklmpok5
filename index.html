@@ -35,6 +35,20 @@
             border: solid 2px;
             border-radius: 10px;
         }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #222;
+            color: white;
+            margin-top: 50px;
+        }
+        .gallery img, .gallery video {
+            width: 90%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,23 +67,34 @@
         
         <p style="font-size:100px;color:#e803fc;text-shadow: h-shadow v-shadow blur-radius color;">OUR MISSION </p>
         <p style="font-size:27px;color:white">We are ngerjain tugas P5, our mission to get the best grade, We documentate our gajah sumatra photos, gallery, and information about our selected animal</p><br><br><hr><br>
-        <br>
+        <br><p style="font-size:30px;color:#e803fc">OUR DOCUMENTATION</p><br><br>
         <div class="divs"><br><br><br>
             <img width="600px" src="https://yakutcoding.github.io/Webklmpok5/gajah1.jpg" style="width:450px;border-radius:10px" alt="Documentation Image">
             <br>
             <p style="font-size:50px">Tentang Gajah Sumatra</p>
             <p style="font-size:30px"> &nbsp;Gajah Sumatra merupakan Endemik asli dari Sumatra. mereka dalam kondisi terancam Punah. kita harus melestarikannya. </p>
-            <br><button style=" width:300px;height:100px;border:0px; border-radius:10px;"><p style="color:black;font-size:30px">Pelajari lebih lanjut</p></button>
-    <br>   </div><br><br>
+            <br><button style=" width:300px;height:100px;border:0px; border-radius:10px;" onclick="window.open('https://id.wikipedia.org/wiki/Gajah_sumatra')">
+                <p style="color:black;font-size:30px">Pelajari lebih lanjut</p></button>
+    <br>   </div><br>
         <div class="divs"><br><br><br>
             <img width="600px" src="https://yakutcoding.github.io/Webklmpok5/gajah2.jpg" style="width:450px;border-radius:10px" alt="Documentation Image">
             <br>
             <p style="font-size:50px">Sunscrern Gajah Sumatra</p>
             <p style="font-size:30px"> &nbsp;Gajah Sumatra memilik sunscreen nya sendiri, dia mandi lumpur untuk melindungi diri nya dari panas dan terik matahari. </p>
-            <br><button style=" width:300px;height:100px;border:0px; border-radius:10px;"><p style="color:black;font-size:30px">Pelajari sunscreen gajah! </p></button>
+            <br><button style=" width:300px;height:100px;border:0px; border-radius:10px;" onclick="window.open('https://www.getyourguide.com/bali-l347/pengalaman-merawat-gajah-di-kebun-binatang-bali-t195518/?visitor-id=FVFZ0J49HK4WG3HZ78DNYT23ZSXY301B&locale_autoredirect_optout=true')">
+                <p style="color:black;font-size:30px">Pelajari sunscreen gajah! </p></button>
     <br>  
         </div>
         
+        <div class="gallery">
+            <h2 style="font-size:40px;">Gallery</h2>
+            <video controls>
+                <source src="https://yakutcoding.github.io/Webklmpok5/Mayoritas Masyarakat Tidak Tahu Tujuan Melindungi Gajah Sumatra.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img src="https://yakutcoding.github.io/Webklmpok5/gajah1.jpg" alt="Image 1">
+            <img src="https://yakutcoding.github.io/Webklmpok5/gajah2.jpg" alt="Image 2">
+        </div>
     </center>
     <script>
         // Function to add fade-in effect
